@@ -3,12 +3,26 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.9.10",
+    "@nivo/line": "^0.61.1",
+    "@nivo/pie": "^0.61.1",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "bootstrap": "^4.4.1",
+    "canvasjs": "^1.8.3",
+    "material-ui": "^0.20.2",
+    "nivo": "^0.31.0",
+    "plotly.js": "^1.53.0",
+    "pondjs": "^1.0.0-alpha.0",
     "react": "^16.13.1",
+    "react-bootstrap": "^1.0.0",
+    "react-canvas-js": "^1.0.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+    "react-player": "^1.15.3",
+    "react-plotly.js": "^2.4.0",
+    "react-scripts": "3.4.1",
+    "react-timeseries-charts": "^0.16.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -30,5 +44,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "proxy": "http://localhost:5000"
 }
