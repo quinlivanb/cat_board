@@ -63,7 +63,7 @@ class App extends Component {
 
     render() {
         return (
-            <Container fluid>
+            <Container>
                 <Row style={{ height: '75px', width: '1150px'}}>
                     <h1> Cat Board </h1>
                 </Row>

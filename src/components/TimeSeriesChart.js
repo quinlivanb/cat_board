@@ -5,7 +5,7 @@ import { ResponsiveLine } from '@nivo/line'
 
 export const TimeSeriesChart = ({ data }) => {
     return (
-        <Container fluid>
+        <Container>
             <Row style={{ height: '350px', width: '1150px'}}>
                 <Col>
                 <ResponsiveLine

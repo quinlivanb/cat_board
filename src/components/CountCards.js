@@ -3,7 +3,7 @@ import {Card, Col, Container, Row} from "react-bootstrap";
 
 export const CountCards = ({data}) => {
     return (
-        <Container fluid>
+        <Container>
           <Row>
               <Col>
                 <Card style={{ width: '250px'}}>

@@ -8,7 +8,7 @@ def create_connection():
         specified by db_file
     :return: Connection object or None
     """
-    db_file = '/Users/brendan/PycharmProjects/cat_sprayer/cat_sprayer_db.db'
+    db_file = '../../cat_sprayer/cat_sprayer_db.db'
     conn = None
     try:
         conn = sqlite3.connect(db_file)
@@ -63,9 +63,11 @@ def get_events_weekly():
 
     print(daily_events)
 
+    mapping = {0: 'Sunday', 1: 'Monday', 2: 'Tuesday', 3: 'Wednesday', 4: 'Thursday', 5: 'Friday', 6: 'Saturday'}
+
     output = []
     for idx, result in enumerate(daily_events):
-        output.append({"id": str(idx), "label": result[0], "value": result[1]})
+        output.append({"id": str(idx), "label": mapping[int(result[0])], "value": result[1]})
 
     conn.close()
     return output

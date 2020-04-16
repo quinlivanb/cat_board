@@ -33,7 +33,7 @@ const MyPie = ({data}) => {
 
 export const PieChart = ({data_weekly, data_daily}) => {
     return (
-        <Container fluid>
+        <Container>
             <Row>
                 <Col lg={6} style={{ height: '300px', width: '300px'}}>
                     <MyPie data={data_weekly}/>
