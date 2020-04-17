@@ -2,6 +2,4 @@
 
 cd api
 source venv/bin/activate
-export FLASK_APP='spray_api.py'
-export FLASK_ENV='development'
-flask run
+python spray_api

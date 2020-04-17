@@ -1,6 +1,7 @@
 from flask import Flask
 from flask import jsonify
 from sql_calls import get_card_counts, get_events_weekly, get_events_daily, get_all_events
+from waitress import serve
 app = Flask(__name__)
 
 
@@ -29,4 +30,4 @@ def time_series():
 
 
 if __name__ == "__main__":
-    app.run()
+    serve(app, host='0.0.0.0', port=5000)

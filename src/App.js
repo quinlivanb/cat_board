@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { PieChart } from './components/PieChart';
 import { CountCards } from './components/CountCards';
 import { TimeSeriesChart } from './components/TimeSeriesChart';
-import { Container, Row, Jumbotron} from 'react-bootstrap'
+import { Container, Row} from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
 
