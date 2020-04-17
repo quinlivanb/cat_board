@@ -54,7 +54,7 @@ class App extends Component {
 
     componentDidMount() {
        this.updateAll();
-       this.intervalID = setInterval(this.updateAll.bind(this), 2000);
+       this.intervalID = setInterval(this.updateAll.bind(this), 10000);
     }
 
     componentWillUnmount() {
