@@ -1,6 +1,6 @@
 from flask import Flask
 from flask import jsonify
-from sql_calls import get_card_counts, get_events_weekly, get_events_daily, get_all_events
+from sql_calls import get_card_counts, get_events_weekly, get_events_daily, get_all_events, get_cal_events
 from waitress import serve
 app = Flask(__name__)
 
@@ -26,6 +26,12 @@ def card_counts():
 @app.route("/time_series")
 def time_series():
     output = get_all_events()
+    return jsonify(output)
+
+
+@app.route("/cal_events")
+def cal_events():
+    output = get_cal_events()
     return jsonify(output)
 
 

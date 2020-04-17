@@ -106,9 +106,10 @@ def get_all_events():
     conn = create_connection()
 
     cur = conn.cursor()
-    cur.execute("SELECT strftime('%m-%d-%Y', date_time) as day, COUNT(*) "
+    cur.execute("SELECT strftime('%Y-%m-%d', date_time) as day, COUNT(*) "
                 "FROM events "
-                "GROUP BY day ")
+                "GROUP BY day "
+                "ORDER BY day")
     daily_events = cur.fetchall()
 
     data = []
@@ -119,3 +120,21 @@ def get_all_events():
 
     conn.close()
     return [output]
+
+
+def get_cal_events():
+    # events today
+    conn = create_connection()
+
+    cur = conn.cursor()
+    cur.execute("SELECT strftime('%Y-%m-%d', date_time) as day, COUNT(*) "
+                "FROM events "
+                "GROUP BY day ")
+    daily_events = cur.fetchall()
+
+    output = []
+    for idx, result in enumerate(daily_events):
+        output.append({"day": result[0], "value": result[1]})
+
+    conn.close()
+    return output

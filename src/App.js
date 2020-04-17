@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { PieChart } from './components/PieChart';
 import { CountCards } from './components/CountCards';
 import { TimeSeriesChart } from './components/TimeSeriesChart';
+import { MyCalendar } from './components/MyCalandar';
 import { Container, Row} from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
@@ -14,7 +15,8 @@ class App extends Component {
         dailyData: [],
         weeklyData: [],
         cardCounts: [],
-        timeSeries: []
+        timeSeries: [],
+        calEvents: []
     };
 
     async updateDailyData() {
@@ -45,11 +47,19 @@ class App extends Component {
             .catch(e => {console.log(e)})
     }
 
+    async updateCalData() {
+        fetch('/cal_events')
+            .then(res => res.json())
+            .then(data => {this.setState({calEvents: data})})
+            .catch(e => {console.log(e)})
+    }
+
     async updateAll (){
         this.updateDailyData();
         this.updateWeeklyData();
         this.updateCardCounts();
         this.updateTimeSeries();
+        this.updateCalData();
     }
 
     componentDidMount() {
@@ -67,7 +77,7 @@ class App extends Component {
                 <Row style={{ height: '75px', width: '1150px'}}>
                     <h1> Cat Board </h1>
                 </Row>
-                <Row>
+                <Row style={{ height: '120px'}}>
                     <CountCards data={this.state.cardCounts}/>
                 </Row>
                  <Row>
@@ -76,6 +86,10 @@ class App extends Component {
                 <Row>
                     <TimeSeriesChart data={this.state.timeSeries}/>
                 </Row>
+                <Row>
+                    <MyCalendar data={this.state.calEvents}/>
+                </Row>
+
             </Container>
 
         );
