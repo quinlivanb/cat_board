@@ -2,4 +2,4 @@
 
 cd api
 source venv/bin/activate
-python spray_api
+python spray_api.py
