@@ -81,10 +81,12 @@ def get_events_daily():
 
     sql = '''
             select
-            sum(case when strftime('%w', date_time) < 12 then 1 else 0 end),
-            sum(case when strftime('%w', date_time) >= 12 and strftime('%w', date_time) < 17 then 1 else 0 end),
-            sum(case when strftime('%w', date_time) >= 17 and strftime('%w', date_time) < 22 then 1 else 0 end),
-            sum(case when strftime('%w', date_time) >= 22 then 1 else 0 end)
+            sum(case when cast(strftime('%H', date_time) as integer) < 12 then 1 else 0 end),
+            sum(case when cast(strftime('%H', date_time) as integer) >= 12 and 
+            cast(strftime('%H', date_time) as integer) < 17 then 1 else 0 end),
+            sum(case when cast(strftime('%H', date_time) as integer) >= 17 and 
+            cast(strftime('%H', date_time) as integer) < 22 then 1 else 0 end),
+            sum(case when cast(strftime('%H', date_time) as integer) >= 22 then 1 else 0 end)
             from events; 
             '''
 

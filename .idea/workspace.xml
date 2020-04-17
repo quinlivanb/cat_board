@@ -4,10 +4,6 @@
     <list default="true" id="6e702b34-da49-45ef-a52c-01a397d99cfc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/sql_calls.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/sql_calls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CountCards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CountCards.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PieChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PieChart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TimeSeriesChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TimeSeriesChart.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -100,6 +96,7 @@
       <workItem from="1586911495357" duration="1819000" />
       <workItem from="1586913430589" duration="6040000" />
       <workItem from="1586988640297" duration="4984000" />
+      <workItem from="1586997866938" duration="2019000" />
     </task>
     <task id="LOCAL-00001" summary="added sql backend to api">
       <created>1586993680979</created>
@@ -108,7 +105,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586993680979</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="added sql backend to api">
+      <created>1586998010265</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1586998010265</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
