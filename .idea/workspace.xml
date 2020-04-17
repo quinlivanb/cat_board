@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e702b34-da49-45ef-a52c-01a397d99cfc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/spray_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/spray_api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/start_backend" beforeDir="false" afterPath="$PROJECT_DIR$/api/start_backend" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -99,7 +95,7 @@
       <workItem from="1586911495357" duration="1819000" />
       <workItem from="1586913430589" duration="6040000" />
       <workItem from="1586988640297" duration="4984000" />
-      <workItem from="1586997866938" duration="3217000" />
+      <workItem from="1586997866938" duration="3734000" />
     </task>
     <task id="LOCAL-00001" summary="added sql backend to api">
       <created>1586993680979</created>
@@ -129,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587085283876</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="production server for flask">
+      <created>1587085411682</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1587085411682</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
