@@ -27,8 +27,8 @@ def get_card_counts():
     today_start = datetime.now().date()
     week_start = today_start - timedelta(days=today_start.weekday())
 
-    today_start = today_start.strftime("%m-%d-%Y %H:%M:%S")
-    week_start = week_start.strftime("%m-%d-%Y %H:%M:%S")
+    today_start = today_start.strftime("%Y-%m-%d %H:%M:%S")
+    week_start = week_start.strftime("%Y-%m-%d %H:%M:%S")
 
     # events today
     conn = create_connection()
