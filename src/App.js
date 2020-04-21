@@ -77,16 +77,19 @@ class App extends Component {
                 <Row style={{ height: '75px', width: '1150px'}}>
                     <h1> Cat Board </h1>
                 </Row>
-                <Row style={{ height: '120px'}}>
+                <Row style={{ height: '140px'}}>
                     <CountCards data={this.state.cardCounts}/>
                 </Row>
                  <Row>
-                    <PieChart data_weekly={this.state.weeklyData} data_daily={this.state.dailyData}/>
+                     <h4> Daily and Weekly break downs </h4>
+                     <PieChart data_weekly={this.state.weeklyData} data_daily={this.state.dailyData}/>
                 </Row>
-                <Row>
+                <Row style={{ height: '450px'}}>
+                    <h4> Time series trends </h4>
                     <TimeSeriesChart data={this.state.timeSeries}/>
                 </Row>
-                <Row>
+                <Row  style={{ height: '350px'}}>
+                    <h4> Event Calendar </h4>
                     <MyCalendar data={this.state.calEvents}/>
                 </Row>
 

@@ -1,6 +1,7 @@
 import sqlite3
 from sqlite3 import Error
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, date
+from os import environ
 
 
 def create_connection():
@@ -113,8 +114,18 @@ def get_all_events():
     daily_events = cur.fetchall()
 
     data = []
+    date_list = []
     for idx, result in enumerate(daily_events):
         data.append({"x": result[0], "y": result[1]})
+        date_list.append(result[0])
+
+    # fill in zero values
+    start_date = datetime.strptime('2020-04-16', "%Y-%m-%d").date()
+    end_date = date.today()
+    for single_date in daterange(start_date, end_date):
+        cur_date = single_date.strftime("%Y-%m-%d")
+        if cur_date not in date_list:
+            data.append({"x": cur_date, "y": 0})
 
     output = {"id": "daily_events", "data": data}
 
@@ -138,3 +149,38 @@ def get_cal_events():
 
     conn.close()
     return output
+
+
+class PreSignedUrl:
+    def __init__(self):
+        self.url = 'generate pre_signed_url'
+
+    def get_latest_video_url(self):
+
+        if environ.get('LATEST_URL') is None:
+            latest_url = self.generate_new_url()
+            environ['LATEST_URL'] = latest_url
+            return latest_url
+
+        else:
+            latest_url = environ.get('LATEST_URL')
+            # check if expired
+            is_valid = False
+
+            if is_valid:
+                return latest_url
+
+            else:
+                latest_url = self.generate_new_url()
+                environ['LATEST_URL'] = latest_url
+                return latest_url
+
+    def generate_new_url(self):
+        return self.url
+
+
+def daterange(start_date, end_date):
+    for n in range(int ((end_date - start_date).days)):
+        yield start_date + timedelta(n)
+
+

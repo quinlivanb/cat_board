@@ -11,18 +11,17 @@ export const TimeSeriesChart = ({ data }) => {
                 <ResponsiveLine
                     data={data}
                     margin={{top: 50, right: 110, bottom: 50, left: 60}}
-                    xScale={{type: 'point'}}
+                    xScale={{ type: 'time', format: '%Y-%m-%d', precision: 'day',}}
+                    xFormat="time:%Y-%m-%d"
+                    yScale={{type: 'linear'}}
                     curve="natural"
                     axisTop={null}
                     axisRight={null}
                     axisBottom={{
-                        orient: 'bottom',
-                        tickSize: 5,
-                        tickPadding: 5,
-                        tickRotation: 0,
-                        legend: 'Daily Events',
-                        legendOffset: 36,
-                        legendPosition: 'middle'
+                        format: '%b %d',
+                        tickValues: 'every day',
+                        legend: 'time scale',
+                        legendOffset: +40,
                     }}
                     axisLeft={{
                         orient: 'left',
