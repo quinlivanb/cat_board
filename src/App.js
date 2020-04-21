@@ -81,7 +81,7 @@ class App extends Component {
                     <CountCards data={this.state.cardCounts}/>
                 </Row>
                  <Row>
-                     <h4> Daily and Weekly break downs </h4>
+                     <h4> Daily and weekly break downs </h4>
                      <PieChart data_weekly={this.state.weeklyData} data_daily={this.state.dailyData}/>
                 </Row>
                 <Row style={{ height: '450px'}}>
@@ -89,7 +89,7 @@ class App extends Component {
                     <TimeSeriesChart data={this.state.timeSeries}/>
                 </Row>
                 <Row  style={{ height: '350px'}}>
-                    <h4> Event Calendar </h4>
+                    <h4> Event calendar </h4>
                     <MyCalendar data={this.state.calEvents}/>
                 </Row>
 
