@@ -10,7 +10,7 @@ export const TimeSeriesChart = ({ data }) => {
                 <Col>
                 <ResponsiveLine
                     data={data}
-                    margin={{top: 50, right: 110, bottom: 50, left: 60}}
+                    margin={{top: 10, right: 110, bottom: 50, left: 60}}
                     xScale={{ type: 'time', format: '%Y-%m-%d', precision: 'day',}}
                     xFormat="time:%Y-%m-%d"
                     yScale={{type: 'linear'}}

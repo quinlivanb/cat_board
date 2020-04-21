@@ -10,7 +10,7 @@ export const MyCalendar = ({ data }) => {
 
     return (
         <Container>
-            <Row style={{height: '350px', width: '1150px'}}>
+            <Row style={{height: '250px', width: '1150px'}}>
                 <Col>
                     <ResponsiveCalendar
                         data={data}
@@ -18,8 +18,8 @@ export const MyCalendar = ({ data }) => {
                         to={cur_year + "-12-31"}
                         emptyColor="#eeeeee"
                         colors={['#baffb3', '#9dfd87', '#6ae84f', '#11f416']}
-                        margin={{top: 40, right: 40, bottom: 40, left: 40}}
-                        yearSpacing={40}
+                        margin={{top: 0, right: 40, bottom: 40, left: 40}}
+                        yearSpacing={0}
                         monthBorderColor="#ffffff"
                         dayBorderWidth={2}
                         dayBorderColor="#ffffff"
