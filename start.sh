@@ -1,3 +1,3 @@
 #!/bin/bash
 
-nohup bash -c 'npm start' &
+(nohup npm start &)
