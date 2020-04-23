@@ -120,14 +120,14 @@ def get_all_events():
         date_list.append(result[0])
 
     # fill in zero values
-    start_date = datetime.strptime('2020-04-16', "%Y-%m-%d").date()
+    start_date = datetime.strptime(data[0]['x'], "%Y-%m-%d").date()
     end_date = date.today()
     for single_date in daterange(start_date, end_date):
         cur_date = single_date.strftime("%Y-%m-%d")
         if cur_date not in date_list:
             data.append({"x": cur_date, "y": 0})
 
-    # sort data by late
+    # sort data by date
     data = sorted(data, key=lambda k: k['x'])
 
     output = {"id": "daily_events", "data": data}
@@ -183,7 +183,7 @@ class PreSignedUrl:
 
 
 def daterange(start_date, end_date):
-    for n in range(int ((end_date - start_date).days)):
+    for n in range(int((end_date - start_date).days) + 1):
         yield start_date + timedelta(n)
 
 
