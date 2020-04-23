@@ -127,6 +127,9 @@ def get_all_events():
         if cur_date not in date_list:
             data.append({"x": cur_date, "y": 0})
 
+    # sort data by late
+    data = sorted(data, key=lambda k: k['x'])
+
     output = {"id": "daily_events", "data": data}
 
     conn.close()
