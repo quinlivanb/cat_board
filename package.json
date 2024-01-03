@@ -14,7 +14,7 @@
     "canvasjs": "^1.8.3",
     "material-ui": "^0.20.2",
     "nivo": "^0.31.0",
-    "plotly.js": "^1.53.0",
+    "plotly.js": "^2.25.2",
     "pondjs": "^1.0.0-alpha.0",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.0",
